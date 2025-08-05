@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  color: white;
+  position: relative;
+  overflow-x: hidden;
+  background: black;
+}
+
+.background {
+  position: fixed;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: radial-gradient(circle, #222 20%, black 100%);
+  animation: move 20s linear infinite;
+  z-index: -1;
+}
+
+@keyframes move {
+  0% { transform: rotate(0deg) scale(1); }
+  100% { transform: rotate(360deg) scale(1.2); }
+}
+
+header {
+  padding: 60px 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+header h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background 0.3s;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe57;
+}
+
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.sobre p {
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.produtos .galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.produtos .item {
+  width: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 10px #000;
+}
+
+.produtos .item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.produtos .item img:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.8);
+  font-size: 0.9rem;
+}
